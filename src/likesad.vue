@@ -2,58 +2,24 @@
 import { ref } from "vue";
 
 const like = ref(0);
+const sad = ref(0);
 
 function likeClick() {
   like.value++;
 }
 function likeClick2(){
-  like.value--;
+  like.value++;
 }
 </script>
 
 <template>
   <div>
     <button class="button" @click="likeClick()">
-      <img
-        src="http://localhost:5173/"
-        width="50"
-        height="50"
-        aly="like"
-      />
-    </button>
-    <big style="margin:10px">{{ like }}</big>
-    <button class="button2" @click="likeClick2()">
-      <img
-        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fth%2Fillustrations%2F%25E0%25B8%259E%25E0%25B8%25B7%25E0%25B9%2589%25E0%25B8%2599%25E0%25B8%25AB%25E0%25B8%25A5%25E0%25B8%25B1%25E0%25B8%2587-%25E0%25B8%2598%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%25A1%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%2595%25E0%25B8%25B4-%25E0%25B8%25A0%25E0%25B8%25B9%25E0%25B8%25A1%25E0%25B8%25B4%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B9%2580%25E0%25B8%2597%25E0%25B8%25A8-7485228%2F&psig=AOvVaw3Ckm25fi8rzIcSnSEh7r9i&ust=1674481736398000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNCSgdyo2_wCFQAAAAAdAAAAABAJ"
-        width="80"
-        height="80"
-        aly="sad"
-      />
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+  <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+</svg></button>
+  
     </button>
   </div>
 </template>
 
-<style scoped>
-.button {
-  background-color: lime;
-  transition-duration: 0.3s;
-}
-.button:hover {
-  box-shadow: 0 0 3px 2px darkgray;
-  background-color: rgb(0, 224, 0);
-}
-.button:active {
-  box-shadow: 0 0 4px 2px gray;
-}
-.button2 {
-  background-color: rgb(255, 128, 128);
-  transition-duration: 0.3s;
-}
-.button2:hover {
-  box-shadow: 0 0 3px 2px darkgray;
-  background-color: rgb(255, 64, 64);
-}
-.button2:active {
-  box-shadow: 0 0 4px 2px gray;
-}
-</style>
